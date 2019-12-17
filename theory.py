@@ -7,7 +7,8 @@ from itertools import cycle
 from util import get_note_index
 
 class Note():
-    def __init__(self, name, octave):
+    def __init__(self, i, name, octave):
+        self.i = i # note index
         self.name = name
         self.octave = octave
         self.fname = f'{self.name}{self.octave}'
@@ -64,11 +65,11 @@ class Theory():
         # populate notes
         octave = 0
         self.notes = {}
-        for n in range(1, 89): # the 88 piano keys correspond to note numbers (A0 to C8)
+        for i in range(1, 89): # the 88 piano keys correspond to note indices (A0 to C8)
             name = next(Theory.NOTE_NAMES)
             if name == 'C':
                 octave += 1
-            self.notes[n] = Note(name, octave)
+            self.notes[i] = Note(i, name, octave)
 
         # populate intervals
 

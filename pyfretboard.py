@@ -2,7 +2,8 @@
 import guitar, theory
 
 g = guitar.Guitar()
-print(g.fretboard.strings)
+f = g.fretboard
+s = f.section()
 
-i = theory.Interval(6)
-print(i)
+print(f)
+print(s)

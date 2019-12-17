@@ -1,2 +1,3 @@
 # pyfretboard
- Algorithmic calculator for guitar chord voicings
+Guitar chord voicing calculator
+
